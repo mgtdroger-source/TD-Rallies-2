@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="TD_simple.ico" type="image/x-icon">
+<title>Google World — Setup Guide</title>
+<style>
+:root{
+  --td-blue:#0070C0;
+  --td-text:#111;
+  --td-muted:#444;
+}
+html,body{margin:0;padding:0;background:#fff;color:var(--td-text);}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size:14px;
+  line-height:1.55;
+}
+main{
+  max-width: 980px;
+  margin: 36px auto;
+  padding: 0 24px 40px;
+}
+h1{
+  font-size:26px;
+  line-height:1.2;
+  margin: 0 0 14px;
+  color: var(--td-blue);
+  font-weight: 700;
+}
+h2{
+  font-size:18px;
+  line-height:1.25;
+  margin: 22px 0 10px;
+  color: var(--td-blue);
+  font-weight: 700;
+}
+h3{
+  font-size:14px;
+  line-height:1.25;
+  margin: 14px 0 6px;
+  color: var(--td-text);
+  font-weight: 600;
+}
+p{margin: 0 0 10px;}
+ul,ol{margin: 0 0 10px 22px; padding:0;}
+li{margin: 0 0 6px;}
+.note{
+  color: var(--td-muted);
+  margin-top: 2px;
+}
+hr{
+  border:0;
+  border-top:1px solid #e5e7eb;
+  margin: 18px 0;
+}
+</style>
+</head>
+<body>
+<main>
+
+<h1>Google World — Setup Guide</h1>
+
+<h2>Overview</h2>
+<p>Google World allows the Rally App to connect to Google Drive so that entry forms and control data can be shared and collected automatically.</p>
+<p>This setup only needs to be done once. After that, Google World will be ready for future rally projects.</p>
+
+<h2>Before you start</h2>
+<p>You need a Google account.</p>
+<ul>
+  <li>If you already use Gmail, YouTube, or Google Drive, you already have one.</li>
+  <li>If not, Google will guide you through creating a free account.</li>
+</ul>
+
+<h2>Key steps</h2>
+<ul>
+  <li>Sign in to Google Drive.</li>
+  <li>Create a Google Apps Script project.</li>
+  <li>Copy the Rally Code.gs script from Admin.</li>
+  <li>Paste the script into Apps Script.</li>
+  <li>Deploy it as a Web App.</li>
+  <li>Copy the Web App URL back into Rally Admin.</li>
+  <li>Save and test the connection.</li>
+</ul>
+
+<h2>Step 1 — Sign in to Google</h2>
+<ol>
+  <li>Open your web browser.</li>
+  <li>Go to drive.google.com.</li>
+  <li>Sign in using your Google account.</li>
+</ol>
+<p>If Google Drive opens, you are ready to continue.</p>
+
+<h2>Step 2 — Open Google Drive</h2>
+<p>There are two simple ways to open Google Drive.</p>
+<h3>Option A — Direct link</h3>
+<ol>
+  <li>Open your web browser.</li>
+  <li>Type drive.google.com and press Enter.</li>
+</ol>
+
+<h3>Option B — Google apps menu</h3>
+<ol>
+  <li>Open a Google page in your browser.</li>
+  <li>Click the 9-dot apps menu near the top right.</li>
+  <li>Select Drive.</li>
+</ol>
+
+<h2>Step 3 — Create an Apps Script project</h2>
+<ol>
+  <li>In Google Drive, click <strong>New</strong>.</li>
+  <li>Select <strong>More</strong>.</li>
+  <li>Choose <strong>Google Apps Script</strong>.</li>
+</ol>
+<p>A new Apps Script project will open.</p>
+
+<h2>Step 4 — Prepare the Apps Script editor</h2>
+<p>When the editor opens, you will normally see:</p>
+<ul>
+  <li>a file named <strong>Code.gs</strong> in the left panel</li>
+  <li>sample code in the editor area</li>
+</ul>
+<p class="note">Note: Do not worry about the sample code. You will replace it in the next step.</p>
+
+<h2>Step 5 — Copy Rally Code.gs from Admin</h2>
+<ol>
+  <li>Return to the Rally Admin page.</li>
+  <li>Open the <strong>Entries</strong> card.</li>
+  <li>Click <strong>Copy Code.gs</strong>.</li>
+  <li>When the code page opens, click inside it.</li>
+  <li>Press <strong>Ctrl+A</strong> to select all.</li>
+  <li>Press <strong>Ctrl+C</strong> to copy.</li>
+</ol>
+<p>You can now close that page.</p>
+
+<h2>Step 6 — Replace the default script</h2>
+<ol>
+  <li>Return to the Google Apps Script tab.</li>
+  <li>Click inside the editor.</li>
+  <li>Press <strong>Ctrl+A</strong> to select all existing code.</li>
+  <li>Press <strong>Delete</strong>.</li>
+  <li>Press <strong>Ctrl+V</strong> to paste the Rally Code.gs script.</li>
+</ol>
+<p>You should now see the Rally code in the editor.</p>
+
+<h2>Step 7 — Save the script</h2>
+<ol>
+  <li>Click the <strong>Save</strong> icon, or press <strong>Ctrl+S</strong>.</li>
+  <li>Wait until the save message disappears.</li>
+</ol>
+
+<h2>Step 8 — Deploy as a Web App</h2>
+<ol>
+  <li>Click <strong>Deploy</strong> at the top right.</li>
+  <li>Select <strong>New deployment</strong>.</li>
+  <li>Choose <strong>Web app</strong>.</li>
+</ol>
+
+<p>Use these settings:</p>
+<ul>
+  <li><strong>Execute as:</strong> Me</li>
+  <li><strong>Who has access:</strong> Anyone or Anyone with the link</li>
+</ul>
+
+<ol start="4">
+  <li>Click <strong>Deploy</strong>.</li>
+  <li>When prompted, allow the required permissions.</li>
+</ol>
+
+<h2>Step 9 — Copy the Web App URL</h2>
+<p>After deployment, Google will show a Web App URL.</p>
+<p>Copy this address.</p>
+
+<h2>Step 10 — Connect Rally Admin</h2>
+<ol>
+  <li>Return to the Rally Admin page.</li>
+  <li>Open the <strong>Entries</strong> card.</li>
+  <li>Paste the Web App URL into the URL field.</li>
+  <li>Enter your mobile number, including international prefix.</li>
+  <li>Click <strong>Save &amp; Test</strong>.</li>
+</ol>
+<p>If successful, the status message will show <strong>Connected</strong>.</p>
+
+<h2>Google World is now ready</h2>
+<p>You do not need to work directly in Google Drive again for normal use.</p>
+<p>After the first upload of Admin data, a folder called <strong>Time and Distance Rallies</strong> will be created in your Google Drive.</p>
+
+<h2>Using Google World</h2>
+
+<h3>Entries</h3>
+<ul>
+  <li><strong>Upload Entries</strong> creates the online entry form, including Speed Group options.</li>
+  <li><strong>Download Entries</strong> imports submitted entry data into the Admin page.</li>
+</ul>
+
+<h3>Controls</h3>
+<ul>
+  <li>From the Controls page you can upload <strong>STC</strong> and <strong>Marshal</strong> forms.</li>
+  <li>You can then download responses from those forms.</li>
+  <li>The returned data populates the Controls page ready for review and printing.</li>
+</ul>
+
+</main>
+</body>
+</html>

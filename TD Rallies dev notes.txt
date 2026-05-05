@@ -1,0 +1,51 @@
+TD Rallies 2 – Dev Notes
+5 May 2026
+
+v0.4.12
+- Added Route 2 support.
+- Added Schedule page route selector, Timeline 2 and route-based print options.
+- Added combined Timeline view for Route 2.
+- Added Route diagram to Schedule guide.
+- Reviewed and updated all guide documents.
+- Controls route handling is fully automatic.
+- Added PWA STC Recorder App to the system, Code.gs, Google World and Controls page buttons.
+- Resolved Schedule page control numbering issue.
+- Remapped local storage for day routes.
+- Updated Dashboard to read the new store structure and show day route indication.
+- Added Route assignment column in Admin.
+
+TD Rallies – System Notes
+
+CORE APP
+- Single source: TD_RALLIES store.
+- No fallback logic; strict reads only.
+- Pages read/write via controlled flow.
+
+ROUTES
+- Routes are defined in Admin: 1 or 2.
+- Entrants are assigned per route.
+- Both routes must have the same number of controls.
+- Controls page reads route per entrant; no guessing.
+
+TIMELINE
+- Route 1 view: single route.
+- Route 2 view: combined routes.
+- Segment carry-forward logic.
+- Start delays are defined in Route 1.
+
+CONTROLS
+- ETA is calculated from Schedule + SG.
+- Start STC resets timing base.
+- Missing route data shows “No Rt. 2”.
+
+PWA STC RECORDER
+- Uses shared config from Controls.
+- Latest submission overwrites previous.
+- Date guard prevents wrong-day use.
+- Raw and merged sheets maintained.
+
+GOOGLE INTEGRATION
+- Apps Script Web App endpoint.
+- Unified STC Day sheet for Forms + PWA.
+- Error tab for mismatches.
+

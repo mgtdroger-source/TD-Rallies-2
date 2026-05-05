@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="TD_simple.ico" type="image/x-icon">
+<title>Admin — Entries &amp; Rally Setup (Guide)</title>
+<style>
+/* TD Rally Guide Base (stable, GitHub/local consistent) */
+:root{
+  --td-blue:#0070C0;
+  --td-text:#111;
+  --td-muted:#444;
+}
+html,body{margin:0;padding:0;background:#fff;color:var(--td-text);}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size:14px;
+  line-height:1.55;
+}
+main{
+  max-width: 980px;
+  margin: 36px auto;
+  padding: 0 24px 40px;
+}
+h1{
+  font-size:26px;
+  line-height:1.2;
+  margin: 0 0 14px;
+  color: var(--td-blue);
+  font-weight: 700;
+}
+h2{
+  font-size:18px;
+  line-height:1.25;
+  margin: 22px 0 10px;
+  color: var(--td-blue);
+  font-weight: 700;
+}
+h3{
+  font-size:14px;
+  line-height:1.25;
+  margin: 14px 0 6px;
+  color: var(--td-text);
+  font-weight: 600;
+}
+p{margin: 0 0 10px;}
+ul{margin: 0 0 10px 22px; padding:0;}
+li{margin: 0 0 6px;}
+.note{
+  color: var(--td-muted);
+  margin-top: 2px;
+}
+hr{
+  border:0;
+  border-top:1px solid #e5e7eb;
+  margin: 18px 0;
+}
+.blue-btn {
+  display: inline-block;
+  padding: 2px 8px;
+  background: #2d6cdf;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 0 2px;
+  white-space: nowrap;
+  font-size: 0.8em;
+}
+.green-btn {
+  display: inline-block;
+  padding: 2px 8px;
+  background: #2e8b57;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 0 2px;
+  white-space: nowrap;
+  font-size: 0.8em;
+}
+
+.grey-btn {
+  display: inline-block;
+  padding: 2px 8px;
+  background: #808080;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 0 2px;
+  white-space: nowrap;
+  font-size: 0.8em;
+}
+</style>
+</head>
+<body>
+<main>
+<h1>Admin — Entries &amp; Rally Setup</h1>
+<h2>Overview</h2>
+<p>The Admin page is the starting point for every rally. It is used to create the rally record, define rally days, speed groups, and enter competitor details. Admin is the single source of truth for rally structure and entrant data. All other pages (Schedule and Controls) read from the data created here.</p>
+<h3>Quick steps</h3>
+<ul>
+<li>Name the rally, this sets up page links and local memory recording your work.</li>
+<li>Set up the rally workspace folder ready for saving a backup of your work.</li>
+<li>Select your rally days, dates, starting times and leaving increment.</li>
+<li>Select the number of speed groups (SG) and speeds for each group.</li>
+<li>Set up your Google Drive.</li>
+<li>Upload the entry data and then share the form link.</li>
+<li>Entries can be fully automated or manually entered.</li>
+</ul>
+<p>The page has a Normal/Compact button. Toggling this changes the page size.</p>
+<h2>Admin layout</h2>
+<p>The page has three main sections: days, speed groups and routes; the control panel; and the entries table.</p>
+<h2>Days, speed groups and Routes</h2>
+<ul>
+<li>Select the number of <strong>Rally days</strong> using the day selector, up to 7 days.</li>
+<li>Dates, click the calendar icon, select the starting date, following day dates cascade, for a rest day increment the date after the rest day, further days will cascade again.</li>
+<li>Starting times, click the clock icon, select the start time for each day.</li>
+<li>Increment, the start time interval which can be incremented in 30 sec steps, the default is 1 minute.</li>
+<li>Select the number of <strong>Speed Groups</strong> using the selector, up to 4 speed groups.</li>
+<li>Adjust the speed for each Speed Group as required, the speed of a slower group cannot exceed that of a faster group, as the speed of a faster group is decremented it will decrement the speed of the slower group below.</li>
+<li>The speed selected is the maximum speed that will be available when setting speeds in the route schedule, the speed allocated to an entrant and for result calculations. If a selected speed is changed allocations update accordingly.</li>
+<p class='note'>Note: if a speed is increased then a review of the schedule speeds will be required, these do not automatically increment, they only decrement automatically.</p>
+<li><strong>Routes</strong>, when 2 is selected, each rally day requires two schedules. Each route must have the same number of controls such as STCs and Marshals.</li>
+</ul>
+<p>With 2 routes selected the table of the Admin page gains an additional column to assign entrants to a route.</p>
+<p>Route allocations are not subject to sort, so they must be reviewed once an entry table has been sorted by speed group. The first car away should be assigned to route 1.</p>
+<p class='note'>Note: If 2 routes are only required for one day of the rally, then routes can be set to one for the other days.</p>
+<h2>Control panel</h2>
+<ul>
+<li><strong>Enter Rally Title</strong>, your Rally Name, which is the first detail to be entered when commencing a new rally, next to the title is the rXXX number, it increments each time you save the project.</li>
+<li><span class="green-btn">ADD ROW</span> adds an additional entrant row to the bottom of the table. Downloaded entries automatically add rows.</li>
+<li><span class="grey-btn">Sort</span> used to arrange the table of entrants into speed group order. <span class="green-btn">Sort</span> the entrant table is sorted.</li>
+<li><span class="blue-btn">Save</span> save your work to a selected workspace folder.</li>
+<li><span class="blue-btn">Load</span> select a Rally file from your workspace folder, note: loading will overwrite your current work, so consider saving prior to loading.</li>
+<li><span class="blue-btn">Print</span> print entrant details and their day starting times.</li>
+<li><span class="blue-btn">Entries</span> when selected it presents a card which is the gateway to automation, refer to Google integration below.</li>
+</ul>
+<p><span class="green-btn">Tools</span>munu of items.</p>
+<ul>
+<li>Setting up your workspace, for example a folder in My documents.</li>
+<p>In order to save your projects on your computer, a workspace folder is required. Selecting <strong>Set Rally Workspace</strong> opens a Windows picker, enabling you to navigate to where you want to save projects, for example a new folder in My Documents named "Rallies".
+Based on your chosen Rally title, a new sub folder is created within the Rallies folder when you save. Inside that folder will be your project file with its <strong>rXXX</strong> reference. Each time you save the same project, rXXX is incremented by 1 and shown on each of the program pages.</p>
+<li><strong>Save As</strong>, which enables you to save your current project giving it a new Rally Title.</li>
+<li><strong>Load</strong>, select a previously saved project.</li>
+<li><strong>New Rally</strong>, resets all the pages clearing any prior work, a new Title is required.</li>
+</ul>
+
+<h2>The Table</h2>
+<p>Entry and management of competitor details, either manually or fully automated. Entrants can be sorted by speed group, including start delays between groups.
+Add row button: Adds a new entrant row to the bottom of the table.</p>
+<p class='note'>Note: Rally numbers and start times cannot be edited in the table. Rally number sequence is fixed.</p>
+<p>Entry column and gear icon.</p>
+<p>As each entry is added to the table an index (row number) is assigned to that entrant, later when the table is sorted the index will remain with that entrant.</p>
+<h2>Entry Row gear menu:</h2>
+<ul>
+<li><strong>Insert</strong> a new row above or below, index numbers update maintaining sequence.</li>
+<li><strong>Copy row</strong>, entrant details excluding Rally number and times which are fixed.</li>
+<li><strong>Paste</strong>, Pasting is only allowed into an empty row.</li>
+<li><strong>Delete</strong>, when selected a confirmation is presented before the row is removed.</li>
+</ul>
+<p class='note'>Note: when rows are inserted or deleted sequence numbers are updated.</p>
+<h2>Speed Group column</h2>
+<p>Clicking a Speed group cell in the table will open a selector menu from which to pick a speed group, once selected the cell will be colour coded for ease of reference. If the group speed is amended table cells will update automatically. If an entrant allocated in a slower group and that group option is removed, then that entrant will be promoted to the next higher speed group.</p>
+<p class='note'>Note: If the omitted speed group is reinstated during the same work session, then entrants will be returned to that group.</p>
+<h2>Sort</h2>
+<p>The sort function is used to arrange the table of entries into speed groups, typically slowest to fastest. Sort should only be used when all entries have been received. Once a table is sorted, options such as Add Row, the gear icon options and download of data are no longer available. If late entries are to be accommodated, then select sort and restore the tables original order. When a table is sorted the original entry index number will remain with the entrant.</p>
+
+<h3>Notes</h3>
+<ul>
+<li>When sorting Rally numbers and start times remain fixed.</li>
+<li>Route allocation remains with the entrant and can be updated as required.</li>
+<li>Special case, when a table is sorted, an entrant's SG can be changed, but his rally number and start time will remain the same.</li>
+</ul>
+<h2>Google integration</h2>
+<p>When <span class="blue-btn">Entries</span> is selected, a card is presented. This is the interface for setting up and interacting with Google World. Once set up, the facility is fully automated and little or no interaction with Google is required. All forms, tables and rally-based folders are fully automated.</p>
+<h2>Setup process</h2>
+<ul>
+<li>In the setup section of the card enter your mobile number which must include an international prefix for example (+27) followed by your number excluding the leading 0.</li>
+<li>URL will be copied once you have completed the initial setup of Google World.</li>
+<li>For detailed instructions select the Setting up guide button.</li>
+<li>Once both mobile and URL have been entered select Save &amp; test.</li>
+<li>At the top of the card the detail should now change to “Connected” all the hard work is done.</li>
+</ul>
+<h2>Using the Entries card</h2>
+<p>When the Entries card is open there are rows of buttons, first in the lower section of the card is Setup, if not already set up click the Setting up guide button and follow the instructions.</p>
+<h2>Entry link</h2>
+<p>Until entry data has been uploaded these buttons will be greyed, but after upload they will be lit. The buttons are used to select the method of sending a link to the Rally entry form, if WhatsApp (WA) is selected you will need to have the WA app installed on your machine.  When WA is selected a message and link will be sent to yourself which you can then distribute further.</p>
+<p>WA is by far the most convenient method of sharing form links, and most people today are comfortable using WA, once all the entrant details have been gathered consider setting up a WA group which will make the distribution of the result (STC) form so much simpler.</p>
+<h2>Uploading entry data</h2>
+<p>Before uploading entry data ensure you have set up the rally Speed Groups options and speeds, to the left of upload is displayed the Rally Title, this is the text that will appear at the top of the Google entry form, the text can be edited as required.</p>
+<p class='note'>Note: uploading of data takes a little while, so be patient a lot is being created.</p>
+<h2>Entry data</h2>
+<p>View response forms button, opens a new tab presenting the Google form responses.</p>
+<p>Open entry data button, opens a new tab presenting the worksheet of processed Google data that is ready for download.</p>
+<p class='note'>Note: An entrant can submit more than one response, but only their last will appear in the worksheet ready for download.</p>
+<p>Download button, this button will be greyed until there is data ready for download, when data is downloaded it overwrites any prior data in the entries table.</p>
+<p>Tip: review entry data worksheet before downloading to gain an appreciation of the entries received.</p>
+<h2>Application RESET</h2>
+<p>Full Reset is rarely needed. If things go wrong for any reason, follow these steps. Select F12 on your keyboard, select "Applications", in the left panel select "file://" from below "Local storage", right click file then select "clear".</p>
+<p>The local memory is now cleared. Go to your Google Drive, and delete the folder "Time & Distance Rallies", also delete the folder from the trash bin. Now repeat the Google setting up process. Potentially you may have a corrupted saved rally file, so consider deleting that folder so you will be starting over from a totally clean base.</p>
+</main>
+</body>
+</html>
