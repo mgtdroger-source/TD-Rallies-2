@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="TD_simple.ico" type="image/x-icon">
+<title>Route Planning — Google Maps (Guide)</title>
+<style>
+/* TD Rally Guide Base (stable, GitHub/local consistent) */
+:root{
+  --td-blue:#0070C0;
+  --td-text:#111;
+  --td-muted:#444;
+}
+html,body{margin:0;padding:0;background:#fff;color:var(--td-text);}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size:14px;
+  line-height:1.55;
+}
+main{
+  max-width: 980px;
+  margin: 36px auto;
+  padding: 0 24px 40px;
+}
+h1{
+  font-size:26px;
+  line-height:1.2;
+  margin: 0 0 14px;
+  color: var(--td-blue);
+  font-weight: 700;
+}
+h2{
+  font-size:18px;
+  line-height:1.25;
+  margin: 22px 0 10px;
+  color: var(--td-blue);
+  font-weight: 700;
+}
+h3{
+  font-size:14px;
+  line-height:1.25;
+  margin: 14px 0 6px;
+  color: var(--td-text);
+  font-weight: 600;
+}
+p{margin: 0 0 10px;}
+ul{margin: 0 0 10px 22px; padding:0;}
+li{margin: 0 0 6px;}
+.note{
+  color: var(--td-muted);
+  margin-top: 2px;
+}
+hr{
+  border:0;
+  border-top:1px solid #e5e7eb;
+  margin: 18px 0;
+}
+</style>
+</head>
+<body>
+<main>
+<h1>Route Planning — using Google Maps</h1>
+
+<h2>Overview</h2>
+<p>Google Maps can be used to plot your route geometry and distances. All rally instruction naming, meanings and distances should be recorded separately in your rally design notes.</p>
+<p><b>Important:</b> Google Maps allows a maximum of 10 locations (instructions/waypoints) per route (Start + End + up to 8 intermediate stops). Longer routes must therefore be built in logical sections. You will be opening two tabs of Google Maps, the first tab for your route plot and the second tab used for street view aiding location of waypoint details. Alternatively, you can try Google earth for your second tab, it has the advantage of allowing you to drop named pins, the coordinates of which you can then copy to your route.</p>
+
+<h2>1. Creating Your First Route Section</h2>
+<ul>
+  <li>Open Google Maps.</li>
+  <li>The first tab will be your Route Tab.</li>
+  <li>Zoom into your starting location.</li>
+  <li>Right-click your start point and select <b>Directions from here</b>.</li>
+  <li>Ensure <b>Car</b> mode is selected.</li>
+  <li>Scroll to where your first section will end (this does not need to be exact).</li>
+  <li>In the left panel, click <b>Choose destination, or click on the map</b>.</li>
+  <li>Click the intended end point on the map.</li>
+  <li>The last waypoint of your first section being recorded and used as the first waypoint of your next section.</li>
+  <li>Your first section will now appear in blue on the map view.</li>
+</ul>
+
+<h2>2. Forcing the Route to Follow the Correct Roads</h2>
+<ul>
+  <li>Click and drag the blue route line to force Google to use the exact roads required.</li>
+  <li>Add intermediate stops only where necessary to prevent Google from re-routing incorrectly.</li>
+  <li>Do not attempt to add every junction as a waypoint — use waypoints only to pin point special details.</li>
+</ul>
+
+<h2>3. Saving Your Work</h2>
+<ul>
+  <li>Click <b>Share</b>.</li>
+  <li>Select <b>Copy link</b>.</li>
+  <li>Paste the link into a notes document.</li>
+  <li>Add a description explaining what the link represents (e.g., <i>Section 1 – Start to Control 1</i>).</li>
+  <li>Save regularly as you refine the route.</li>
+  <li>Delete outdated links once superseded.</li>
+</ul>
+
+<h2>4. Using Street View to Confirm Waypoints</h2>
+<p>Not every detail along your route needs to be recorded as a waypoint, simple details such as road junctions and more obvious landmarks can be simply measured in terms of the distance to them, it's the less obvious details that you need to capture. Overhead wires can be difficult to pin point as they seem to be filtered from the Google satallite view, but they can be found by switching back and forth to street view in your 2nd Google maps tab.</p>
+<ul>
+  <li>Open a second Google Maps tab for inspection purposes.</li>
+  <li>Scroll to your point of interest, many of which will be easy to indentify and measure the distance to them, for example road junctions.</li>
+  <li>It's the more obscure details along your route that you may have to allocate to an actual mapped waypoint.</li>
+  <li>Drag the yellow Pegman onto the road.</li>
+  <li>Navigate in Street View until aligned precisely with the location detail.</li>
+  <li>Click the back arrow (top left) to return to map view.</li>
+  <li>After exiting Street View, zoom in without panning the map.</b></li>
+  <li>Right-click in the centre of the screen and select <b>What’s here?</b></li>
+  <li>Click the coordinates displayed at the bottom of the window.</li>
+  <li>A red pin will appear at the exact location.</li>
+  <li>Copy the GPS coordinates shown at the top left of the window.</li>
+  <li>Now select/go back to your route tab.</li>
+</ul>
+
+<h2>5. Adding the Waypoint to the Route</h2>
+<ul>
+  <li>Return to your Route Tab.</li>
+  <li>Click <b>Add destination</b>.</li>
+  <li>Paste the GPS coordinates and press Enter.</li>
+  <li>Drag the waypoint into the correct position in the list (place your mouse to the left of the waypoint to move it).</li>
+  <li>To confirm accuracy, drop Pegman onto the new waypoint and verify the location.</li>
+  <li>It may take some practice to position waypoints accurately, do not try moving the waypoint, go back to your second tab and repeat the location exercise.</li>
+  <li>To delete a waypoint, hover to the right of it and click the X.</li>
+</ul>
+
+<h2>6. Naming and Recording Instructions</h2>
+<p>Google will assign automatic labels to waypoints based on nearby data. These names are often unsuitable for rally use.</p>
+<p>Always record your own instruction details in your notes, for example:</p>
+<ul>
+  <li>12.43 km – SIGN: Brown tourist board “R46 Tulbagh.”</li>
+  <li>18.72 km – Side Road junction to the right.</li>
+  <li>22.10 km – Gates to estate.</li>
+</ul>
+<p>Google provides geometry and distance. You provide instruction meaning.</p>
+
+<h2>7. Managing Long Routes</h2>
+<ul>
+  <li>Divide long rallies into logical sections.</li>
+  <li>Section 1: Start → Control 1 or clear landmark.</li>
+  <li>Section 2: Control 1 → STC 2.</li>
+  <li>Section 3: STC 2 → Finish.</li>
+  <li>Each section should have its own saved link.</li>
+</ul>
+
+<h2>8. Real-World Validation</h2>
+<ul>
+  <li>Use a GPS device or trip meter.</li>
+  <li>Slow down or briefly stop at waypoints.</li>
+  <li>Allow the distance reading to stabilise before recording.</li>
+  <li>Adjust schedule distances if required.</li>
+</ul>
+
+<hr>
+<p class="note"><b>Summary:</b> Plan and force your route in Google Maps, confirm key locations using Street View, save share links regularly for version control, record your own rally instructions separately, and complete a final real-world validation drive to confirm accuracy.</p>
+
+
+</main>
+</body>
+</html>
